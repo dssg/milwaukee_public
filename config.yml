@@ -1,0 +1,133 @@
+feature_groupings:
+    - demography: &demography
+      - age
+      - age_categorical 
+      - student_race
+      - student_gender
+      - birth_month
+      - num_demo_records
+      - school
+      - student_city
+      - schools_per_student
+      - demo_records_per_year
+      - max_demo_records_per_year
+      - student_migrant_ed_indicator
+      - student_504_indicator
+      - student_indian_ed_indicator
+    - discipline: &discipline
+      - first_dis_age
+      - total_num_of_incidents
+      - num_of_incidents_learning_environment
+      - num_of_incidents_physical_safety
+      - num_of_incidents_weapons_related
+      - has_drug_related_discipline
+      - discipline_days_zero_low_medium_high
+      - num_discipline_days
+      - avg_discipline_per_year
+      - avg_discipline_weapons_per_year
+      - avg_discipline_physical_per_year
+      - avg_discipline_learning_per_year
+      - max_discipline_per_year
+      - max_discipline_weapons_per_year
+      - max_discipline_physical_per_year
+      - max_discipline_learning_per_year
+      - std_discipline_per_year
+      - std_discipline_weapons_per_year
+      - std_discipline_physical_per_year
+      - std_discipline_learning_per_year
+      - sum_discipline_last_year
+      - sum_discipline_weapons_last_year
+      - sum_discipline_physical_last_year
+      - sum_discipline_learning_last_year
+      - sum_discipline_last_2_years
+      - sum_discipline_weapons_last_2_years
+      - sum_discipline_physical_last_2_years
+      - sum_discipline_learning_last_2_years
+      - num_discipline_last_year
+      - num_discipline_weapons_last_year
+      - num_discipline_physical_last_year
+      - num_discipline_learning_last_year
+      - num_discipline_last_2_years
+      - num_discipline_weapons_last_2_years
+      - num_discipline_physical_last_2_years
+      - num_discipline_learning_last_2_years
+    - attendance: &attendance
+      - avg_att_days_per_year
+      - avg_abs_days_per_year
+      - avg_membership_days_per_year
+      - att_variance_over_years
+      - min_max_att_ratio
+      - first_last_att_gap
+      - att_days_last_year
+    - programs: &programs
+      - is_student_in_tabs
+      - is_student_homeless
+      - is_student_atrisk
+      - is_student_bilingual
+      - is_mckinney_vento
+      - is_esl
+      - is_headstart
+      - is_intradistrict
+      - is_teacher_support
+      - is_student_sp_ed
+      - is_schoolage_parent
+      - is_city_transport
+    - assessment: &assessment
+      - math_3rd_grade_wkce_categorical
+      - math_3rd_grade_wkce_numerical
+      - math_3rd_grade_map_categorical
+      - math_3rd_grade_map_numerical
+      - math_3rd_grade_ach_categorical
+      - math_3rd_grade_ach_numerical
+      - reading_3rd_grade_wkce_categorical
+      - reading_3rd_grade_wkce_numerical
+      - reading_3rd_grade_map_categorical
+      - reading_3rd_grade_map_numerical
+      - ela_3rd_grade_ach_categorical
+      - best_score_reading_map
+      - worst_score_reading_map
+      - best_score_math_map
+      - worst_score_math_map
+      - best_score_reading_map_last_year
+      - worst_score_reading_map_last_year
+      - best_score_math_map_last_year
+      - worst_score_math_map_last_year
+      - best_score_reading_map_last_2_years
+      - worst_score_reading_map_last_2_years
+      - best_score_math_map_last_2_years
+      - worst_score_math_map_last_2_years     
+      - reading_map_slope
+      - math_map_slope
+      - ela_3rd_grade_ach_numerical
+    - enrollment: &enrollment
+      - end_enroll_month_last_year
+      - adm_enroll_month_last_year
+      - adm_enroll_not_in_time
+      - end_enroll_not_in_time
+      - enroll_days_last_year
+      - enroll_records_per_year
+    - cj: &cj 
+      - num_chips_records
+features:
+  - is_student_relevant
+  - *programs
+  - *discipline
+  - *demography
+  - *assessment
+  - *attendance
+  - *cj
+  - *enrollment
+train_label: year_1314
+test_label: year_1415
+train_table: features2012
+test_table: features2013
+models_to_run: 
+  - LR
+  #- AB
+  #- NB
+  #- RF
+  #- KNN
+  #- ET
+output_file: test1.json
+k: 0.01
+output_plot: savefig.png

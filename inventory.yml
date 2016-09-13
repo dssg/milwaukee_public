@@ -1,0 +1,43 @@
+cj_data_path:
+  raw_path: /mnt/data/milwaukee/CJC_DataHub
+  clean_path: /mnt/data/milwaukee/etl_processing/CJC_DataHub
+case_files:
+  - Juvenile
+
+
+# Miscelaneous education data
+misc_ed_data:
+  raw_path: /mnt/data/milwaukee/new_data
+  clean_path: /mnt/data/milwaukee/etl_processing/New_Ed_Data
+
+calendar:
+  filename: "cal dates key to date value.csv"
+  output_filename: "clean_cal_dates.csv"
+
+assessment:
+  filename: "Assessment data.csv"
+  output_filename: "clean_assessment_data.csv"
+
+old_assessment:
+  filename: "../Ed_DataHub/Assessment data 3rd grade.xlsx"
+  output_filename: "cleaned_old_assessment.csv"
+
+demographics:
+  filename: "Deomographics 0405 through 1415. Us this also for gender.csv"
+  output_filename: "cleaned_demographics.csv"
+
+old_demographics:
+  filename: "../Ed_DataHub/Demographic Files 04-05 to 14-15.csv"
+  output_filename: "cleaned_old_demographics.csv"
+
+discipline:
+  filename: "Discipline data 04-05 to 14-15.csv"
+  output_filename: "cleaned_discipline.csv"
+
+enrollment:
+  filename: 'Enrollments entry and withdraw by school grade and year 08-09 through 15-16.xlsx'
+  output_filename: 'clean_enrollment.csv'
+
+programs:
+  filename: 'Programs.csv'
+  output_filename: 'clean_programs.csv'

@@ -1,0 +1,7 @@
+__pycache__
+.ipynb_checkpoints
+*.pyc
+CREDENTIALS_FILE.json
+config.yml
+test.png
+test1.json
